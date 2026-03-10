@@ -1,14 +1,11 @@
 
+import React from 'react';
+import {Text, View} from 'react-native';
 
-import React from 'react'
-import { Text, View } from 'react-native'
-
-const customDrawer = ()=> {
+export const CustomDrawer = ()=> {
   return (
     <View>
       <Text>customDrawer</Text>
     </View>
-  )
-}
-
-export default customDrawer
+  );
+};

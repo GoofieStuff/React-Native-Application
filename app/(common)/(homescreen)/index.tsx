@@ -1,16 +1,15 @@
-import Drawer from 'expo-router/drawer';
 import {Text, View} from 'react-native';
+import React from 'react';
+import {JSX} from 'react/jsx-runtime';
+import Homescreen from './HomeScreen';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
-const Homescreen = (): React.JSX.Element => {
-
+const index = ():JSX.Element => {
   return (
-    <>
-      <Drawer.Screen options={{title: 'Home'}} />
-      <View className={'w-full bg-blue-500 h-full items-center justify-center '}>
-        <Text>This is HomeScreen.</Text>
-      </View>
-    </>
+    <SafeAreaView>
+      <Homescreen />
+    </SafeAreaView>
   );
 };
 
-export default Homescreen;
+export default index;
