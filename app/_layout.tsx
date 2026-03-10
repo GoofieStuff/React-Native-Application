@@ -1,7 +1,7 @@
 import '@/global.css';
 import { Stack } from "expo-router";
 import { Drawer } from "expo-router/drawer";
-import { Platform, useWindowDimensions } from "react-native";
+import { Platform, Text, useWindowDimensions, View } from "react-native";
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function RootLayout() {
@@ -16,7 +16,15 @@ export default function RootLayout() {
             console.log('prps : ', props)
             return (<></>)
           }}
+         
           screenOptions={{
+            header:(props)=>{
+              return (
+                <View className='absolute w-full h-14 bg-gray-500/40' >
+                  <Text className='text-2xl'>Hello</Text>
+                </View>
+              )
+            },
             drawerType: (isSmallScreen ? 'front' : 'slide'),
             overlayColor: 'transparent',
             drawerStyle: {
