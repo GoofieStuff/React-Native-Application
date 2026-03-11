@@ -1,19 +1,20 @@
-import {Link} from 'expo-router';
 import Drawer from 'expo-router/drawer';
-import {Button, Text, View} from 'react-native';
+import {ScrollView} from 'react-native';
+import HomeScreenHeader from './HomeScreenHeader';
+import {Box} from '@/components/ui/box';
 
-const Homescreen = (): React.JSX.Element => {
+const Homescreen= (): React.JSX.Element => {
 
   return (
     <>
-      <Drawer.Screen options={{title: 'Home'}} />
-      <View className={'w-ful h-full items-center justify-center bg-tertiary-50'}>
-        <Text>This is HomeScreen.</Text>
-        <Link href={'/HomeScreen2'}>
-          <Button title={'Go to HomeScreen2'}></Button>
-        </Link>
-      </View>
+      <ScrollView className={'w-full h-full'}>
+        <Drawer.Screen options={{title: 'Home'}} />
+        <Box className={'w-full h-full items-center p-2 gap-5'}>
+          <HomeScreenHeader />
+        </Box>
+      </ScrollView>
     </>
+
   );
 };
 

@@ -20,9 +20,8 @@ export const CustomWebHeader = ({props}: CustomHeaderProps): JSX.Element => {
 
 export const CustomAppHeader = ({props}: CustomHeaderProps): JSX.Element => {
   const insets = useSafeAreaInsets();
-  console.log(props);
   return (
-    <View className={'w-full h-14 justify-center items-center'} style={{top: insets.top}}>
+    <View className={'w-full h-14 justify-center items-center bg-blue-800/50'} style={{marginTop:insets.top, marginLeft:insets.left, marginRight:insets.right}}>
       <View className={'px-5 py-1 rounded-xl shadow-xl bg-transparent'}>
         <Text className={'text-2xl'}>Hello</Text>
       </View>
