@@ -1,4 +1,4 @@
-import {cn} from '@/utilities/nativewindMerge';
+import {cn} from '@/utilities/Styling';
 import {View, ViewProps} from 'react-native';
 
 type ThemedViewProps = ViewProps & {
