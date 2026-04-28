@@ -23,11 +23,34 @@ export default function RootLayout() {
     'Bitcount-Bold': require('../assets/fonts/BitcountGrid/BitcountGridSingle_Roman-Bold.ttf'),
     'Bitcount-ExtraBold': require('../assets/fonts/BitcountGrid/BitcountGridSingle_Roman-ExtraBold.ttf'),
     'Bitcount-Black': require('../assets/fonts/BitcountGrid/BitcountGridSingle_Roman-Black.ttf'),
+    'Nunito-Black': require('../assets/fonts/Nunito/Nunito-Black.ttf'),
+    'Nunito-Bold': require('../assets/fonts/Nunito/Nunito-Bold.ttf'),
+    'Nunito-ExtraBold': require('../assets/fonts/Nunito/Nunito-ExtraBold.ttf'),
+    'Nunito-Light': require('../assets/fonts/Nunito/Nunito-Light.ttf'),
+    'Nunito-Medium': require('../assets/fonts/Nunito/Nunito-Medium.ttf'),
+    'Nunito-Regular': require('../assets/fonts/Nunito/Nunito-Regular.ttf'),
+    'Nunito-SemiBold': require('../assets/fonts/Nunito/Nunito-SemiBold.ttf'),
+    'Nunito-Italic-Bold': require('../assets/fonts/Nunito/Nunito-BoldItalic.ttf'),
+    'Nunito-Italic': require('../assets/fonts/Nunito/Nunito-Italic.ttf'),
+    'Nunito-Italic-SemiBold': require('../assets/fonts/Nunito/Nunito-SemiBoldItalic.ttf'),
+    'SairaStencil-Thin' : require('../assets/fonts/SairaStencil/SairaStencil-Thin.ttf'),
+    'SairaStencil-ExtraLight' : require('../assets/fonts/SairaStencil/SairaStencil-ExtraLight.ttf'),
+    'SairaStencil-Light' : require('../assets/fonts/SairaStencil/SairaStencil-Light.ttf'),
+    'SairaStencil-Medium' : require('../assets/fonts/SairaStencil/SairaStencil-Medium.ttf'),
+    'SairaStencil-SemiBold' : require('../assets/fonts/SairaStencil/SairaStencil-SemiBold.ttf'),
+    'SairaStencil-Bold' : require('../assets/fonts/SairaStencil/SairaStencil-Bold.ttf'),
+    'SairaStencil-Black' : require('../assets/fonts/SairaStencil/SairaStencil-Black.ttf'),
   });
 
   useEffect(()=>{
     if(fontsLoaded || fontError){
       SplashScreen.hideAsync();
+    }
+    if(fontError){
+      console.log('fonts loading failed', fontError);
+    }
+    if(fontsLoaded){
+      console.log('fonts loaded successfully.');
     }
 
   }, [fontsLoaded, fontError]);

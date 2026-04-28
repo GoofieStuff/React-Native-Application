@@ -1,4 +1,4 @@
-import {cn} from '@/utilities/Styling';
+import {applyShadow, cn} from '@/utilities/Styling';
 import {View, ViewProps} from 'react-native';
 
 type ThemedViewProps = ViewProps & {
@@ -7,7 +7,7 @@ type ThemedViewProps = ViewProps & {
 
 const ThemedView = ({className='', ...rest}: ThemedViewProps) => {
   return (
-    <View className={cn('dark:bg-gray-800 bg-tertiary-100 ', className)} {...rest} />
+    <View className={styleMerge('dark:bg-gray-800 bg-tertiary-100 ', className)} {...rest} />
   );
 };
 

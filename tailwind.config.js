@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: process.env.DARK_MODE ? process.env.DARK_MODE : 'class',
@@ -18,6 +19,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+     
       colors: {
         primary: {
           50: '#f2fbf4',
@@ -190,6 +192,24 @@ module.exports = {
         'bitcount-bold': ['Bitcount-Bold'],
         'bitcount-extrabold': ['Bitcount-ExtraBold'],
         'bitcount-black': ['Bitcount-Black'],
+        'nunito-light': ['Nunito-Light'],
+        'nunito-regular': ['Nunito-Regular'],
+        'nunito-medium': ['Nunito-Medium'],
+        'nunito-semibold': ['Nunito-SemiBold'],
+        'nunito-bold': ['Nunito-Bold'],
+        'nunito-extrabold': ['Nunito-ExtraBold'],
+        'nunito-black': ['Nunito-Black'],
+        'nunito-italic': ['Nunito-Italic'],
+        'nunito-italic-semibold': ['Nunito-Italic-SemiBold'],
+        'nunito-italic-bold': ['Nunito-Italic-Bold'],
+        'saira-stencil-thin': ['SairaStencil-Thin'],
+        'saira-stencil-extralight': ['SairaStencil-ExtraLight'],
+        'saira-stencil-light': ['SairaStencil-Light'],
+        'saira-stencil-regular': ['SairaStencil-Regular'],
+        'saira-stencil-medium': ['SairaStencil-Medium'],
+        'saira-stencil-semibold': ['SairaStencil-SemiBold'],
+        'saira-stencil-bold': ['SairaStencil-Bold'],
+        'saira-stencil-black': ['SairaStencil-Black'],
       },
       fontWeight: {
         extrablack: '950',
@@ -207,6 +227,15 @@ module.exports = {
         'soft-2': '0px 0px 20px rgba(38, 38, 38, 0.2)',
         'soft-3': '0px 0px 30px rgba(38, 38, 38, 0.1)',
         'soft-4': '0px 0px 40px rgba(38, 38, 38, 0.1)',
+      },
+      keyframes : {
+        fadeIn : {
+          from: {opacity: '0', transform: 'translateY(-50px)'}, 
+          to: {opacity: '1', transform: 'translateY(0px)'},
+        },
+      },
+      animation: {
+        'fade-in' : 'fadeIn 1s ease-in-out 1',
       },
     },
   },
