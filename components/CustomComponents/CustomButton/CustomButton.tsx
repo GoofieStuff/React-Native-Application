@@ -11,6 +11,7 @@ type CustomButtonProps = {
   textStyle?: string;
   onPress?: () => void;
   icon?: React.ComponentType | null;
+  containerCssStyle?:object;
   loading?: boolean;
   disabled?: boolean;
   capitalised?: boolean;
@@ -29,6 +30,7 @@ const CustomButton = ({
   disabled = false,
   capitalised = true,
   spinnerSize=null,
+  containerCssStyle={},
   spinnerColour='',
   destination='',
 }: CustomButtonProps) => {
@@ -45,6 +47,7 @@ const CustomButton = ({
         (disabled || loading) ? 'opacity-50' : '',
         buttonStyle,
       )}
+      style={[, containerCssStyle]}
     >
       {loading && (
         <Spinner size={spinnerSize || 30} color={spinnerColour || 'white'}  />

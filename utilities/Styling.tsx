@@ -9,40 +9,40 @@ export const styleMerge = (...styles)=> {
 type ShadowIntensity = 'sm'|'md'|'lg'|'xl'|'2xl';
 
 const IOS_ANDROID_SHADOWS: Record<ShadowIntensity, object> = {
-  sm: {
+  'sm': {
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 1},
     shadowOpacity: 0.18,
     shadowRadius: 1.5,
     elevation: 2,
   },
-  md: {
+  'md': {
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 3},
     shadowOpacity: 0.22,
     shadowRadius: 4,
     elevation: 5,
   },
-  lg: {
+  'lg': {
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 6},
     shadowOpacity: 0.26,
     shadowRadius: 8,
-    elevation: 10,
+    elevation: 8,
   },
-  xl: {
+  'xl': {
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 10},
     shadowOpacity: 0.3,
     shadowRadius: 14,
-    elevation: 16,
+    elevation: 11,
   },
   '2xl': {
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 16},
     shadowOpacity: 0.36,
     shadowRadius: 20,
-    elevation: 24,
+    elevation: 14,
   },
 };
 

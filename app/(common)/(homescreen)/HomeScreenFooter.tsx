@@ -7,7 +7,7 @@ import {web} from '@/utilities/CommonFunctions';
 
 const HomeScreenFooter = () => {
   return (
-    <ThemedView className={styleMerge('w-full justify-center items-center h-16 ')}>
+    <ThemedView className={styleMerge('w-full justify-center items-center h-16 hover:scale-[101%] transition-all duration-200')}>
       <CustomButton
         buttonText={'Checkout my creations'}
         textStyle={'text-xl'}

@@ -13,7 +13,7 @@ const {intro, features, outro} = HomeScreenData.aboutMe;
 const HomeScreenWebInfo = () => {
 
   return (
-    <ThemedView className={styleMerge('w-full bg-tertiary-100 rounded-xl p-5')}
+    <ThemedView className={styleMerge('w-full bg-tertiary-100 rounded-xl p-5 hover:scale-[101%] transition-all duration-200')}
       style = {getShadow('lg')}
     >
       <ThemedText className={styleMerge('font-saira-stencil-semibold  text-3xl text-[45px] text-left')}>ABOUT ME...!</ThemedText>

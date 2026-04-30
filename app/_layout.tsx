@@ -6,8 +6,12 @@ import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {CustomAppHeader,  CustomWebHeader} from '@/components/CustomComponents';
 import {useFonts} from 'expo-font';
 import {useEffect} from 'react';
-import {hideAsync} from 'expo-router/build/utils/splash';
+import {configureReanimatedLogger} from 'react-native-reanimated';
 SplashScreen.preventAutoHideAsync();
+
+configureReanimatedLogger({
+  strict: false,
+});
 
 export default function RootLayout() {
   const windowDimensions = useWindowDimensions();
@@ -41,15 +45,15 @@ export default function RootLayout() {
     'SairaStencil-Black' : require('../assets/fonts/SairaStencil/SairaStencil-Black.ttf'),
   });
 
+  // useRouteLogger();
+
   useEffect(()=>{
     if(fontsLoaded || fontError){
       SplashScreen.hideAsync();
     }
     if(fontError){
-      console.log('fonts loading failed', fontError);
     }
     if(fontsLoaded){
-      console.log('fonts loaded successfully.');
     }
 
   }, [fontsLoaded, fontError]);

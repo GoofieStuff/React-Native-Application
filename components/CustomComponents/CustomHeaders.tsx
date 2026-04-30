@@ -11,7 +11,6 @@ interface CustomHeaderProps  {
 
 export const CustomWebHeader = ({props}: CustomHeaderProps): JSX.Element => {
   const insets = useSafeAreaInsets();
-  console.log(props);
   return (
     <View className={' w-full h-14 '} style={{top: insets.top}}>
       <LinearGradient
@@ -35,7 +34,7 @@ export const CustomWebHeader = ({props}: CustomHeaderProps): JSX.Element => {
 };
 
 export const CustomAppHeader = ({props}: CustomHeaderProps): JSX.Element => {
-  const insets = useSafeAreaInsets();  console.log(props);
+  const insets = useSafeAreaInsets();  
 
   return (
     <View className={'w-full h-14 justify-center items-center '} style={{marginTop:insets.top, marginLeft:insets.left, marginRight:insets.right}}>

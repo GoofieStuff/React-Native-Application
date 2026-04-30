@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
-import {Easing, cancelAnimation, useAnimatedStyle, useSharedValue, withRepeat, withSequence, withSpring, withTiming} from 'react-native-reanimated';
+import {cancelAnimation, useAnimatedStyle, useSharedValue, withRepeat, withSequence, withSpring, withTiming} from 'react-native-reanimated';
 
 export const useSlideAndOscillate = (
   startX : number =-500,

@@ -16,7 +16,6 @@ import {useSlideAndOscillate} from '@/hooks/Animations/useSlideAndOscillate';
 const HomeScreenHeader = () => {
 
   const {width} = useWindowDimensions();
-  console.log(width);
   const {copyToClipboard} = useCopyToClipboard();
   const imageFloatingAnimation  = useSlideAndOscillate();
   
