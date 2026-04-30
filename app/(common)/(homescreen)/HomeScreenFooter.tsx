@@ -1,18 +1,19 @@
 import React from 'react';
 import ThemedView from '@/components/CustomComponents/ThemedView';
 import {styleMerge} from '@/utilities/Styling';
-import ThemedText from '@/components/CustomComponents/ThemedText';
 import {CustomButton} from '@/components/CustomComponents';
 import {ArrowRight} from 'lucide-react-native';
+import {web} from '@/utilities/CommonFunctions';
 
 const HomeScreenFooter = () => {
   return (
-    <ThemedView className={styleMerge('w-full h-16 ')}>
+    <ThemedView className={styleMerge('w-full justify-center items-center h-16 ')}>
       <CustomButton
         buttonText={'Checkout my creations'}
-        textStyle={'text-lg'}
-        icon={()=> <ArrowRight color={'white'} />}
-        buttonStyle={'h-16'}
+        textStyle={'text-xl'}
+        icon={web? null : (()=> <ArrowRight color={'white'} />)}
+        buttonStyle={styleMerge('h-16 ', (web? 'w-[50%]' : 'w-full'))}
+        destination={'/DSA'}
       />
     </ThemedView>
   );

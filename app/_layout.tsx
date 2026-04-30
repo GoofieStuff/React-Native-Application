@@ -12,7 +12,6 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const windowDimensions = useWindowDimensions();
   const isSmallScreen = windowDimensions.width < 800;
-
   const [fontsLoaded, fontError] = useFonts({
     'Bitcount-Thin': require('../assets/fonts/BitcountGrid/BitcountGridSingle_Roman-Thin.ttf'),
     'Bitcount-ExtraLight': require('../assets/fonts/BitcountGrid/BitcountGridSingle_Roman-ExtraLight.ttf'),
@@ -83,6 +82,9 @@ export default function RootLayout() {
         <Stack 
           screenOptions={
             {
+              contentStyle: {
+                backgroundColor : '#f0f5f7',
+              },
               header:props=>{
                 return (
                   <CustomAppHeader props={props} />

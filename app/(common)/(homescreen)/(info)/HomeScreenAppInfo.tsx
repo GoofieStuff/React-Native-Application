@@ -1,7 +1,7 @@
 import ThemedText from '@/components/CustomComponents/ThemedText';
 import ThemedView from '@/components/CustomComponents/ThemedView';
 import {web} from '@/utilities/CommonFunctions';
-import {styleMerge} from '@/utilities/Styling';
+import {getShadow, styleMerge} from '@/utilities/Styling';
 import {HomeScreenData} from '@/assets/data/HomeScreen';
 import React from 'react';
 import {Icon} from '@/components/ui/icon';
@@ -11,7 +11,9 @@ const {intro, features, outro} = HomeScreenData.aboutMe;
 
 const HomeScreenAppInfo = () => {
   return (
-    <ThemedView className={styleMerge('w-full  bg-tertiary-200 rounded-xl')}>
+    <ThemedView className={styleMerge('w-full  bg-tertiary-100 rounded-xl')}
+      style = {getShadow('lg')}
+    >
       <ThemedView className={styleMerge('bg-transparent p-2 m-2' )}>
         <ThemedText className={styleMerge('font-saira-stencil-semibold text-start text-3xl', (web ? 'text-[45px] text-center' : ''))}>ABOUT ME...!</ThemedText>
         <ThemedText className={styleMerge('font-nunito-medium  text-left text-lg ')}>{intro}</ThemedText>

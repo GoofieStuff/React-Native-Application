@@ -11,17 +11,18 @@ const Homescreen= (): React.JSX.Element => {
 
   return (
     <>
-      <Drawer.Screen options={{title: 'Home'}} />
-      <Box className={styleMerge('lg:w-4/5 w-full self-center android:w-full h-full  p-2 gap-5')}>
+      <Drawer.Screen options={  {title: 'PoRtFoLio'}} />
+      <Box className={styleMerge('lg:w-4/5 bg-tertiary-50 w-full self-center android:w-full h-full  p-2 gap-5')}>
         <HomeScreenHeader />
         {web ? 
           <HomeScreenWebInfo />
           : (
             <>
               <HomeScreenAppInfo />
-              <HomeScreenFooter />
+             
             </>
           )}
+        <HomeScreenFooter />
       </Box>
     </>
 

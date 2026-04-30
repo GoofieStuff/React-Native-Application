@@ -2,7 +2,7 @@ import {Briefcase, Globe, LayoutDashboard, Moon, Puzzle, Shield, Smartphone, Zap
 
 export const HomeScreenData = {
   aboutMe: {
-    intro: 'I am a Front-End Website & Mobile Developer delivering production-ready apps using React & React Native (Expo/CLI).\nYou\'ll get many of the industry standard features such as : ',
+    intro: 'I am 2026 graduated Fresher actively looking for opportunities. I also have 11 months of internship experience as a Front-End (Web, iOS, Android) development-intern delivering production-ready apps using React & React Native (Expo/CLI).\nYou\'ll get many of the industry standard features such as : ',
     features: [
       {icon: LayoutDashboard, label: 'Responsive UIs', color: 'text-primary-500'},
       {icon: Zap,             label: 'Great Animations & Smooth Performance', color: 'text-warning-500'},
@@ -13,7 +13,7 @@ export const HomeScreenData = {
       {icon: Moon,            label: 'Dark Mode & Multiple Language Support', color: 'text-typography-500'},
       {icon: Puzzle,          label: 'Application State Management', color: 'text-error-500'},
     ],
-    outro : 'This Website is an Expo + React-Native Project with single codebase for both Web and Mobile App.\n You can download the Application from here: ',
+    outro : 'This Website is an Expo + React-Native Project with single codebase for both Web and Mobile App.\n You can download the Application here: ',
     link: 'https://yeahwhatever.com',
   },
 };
