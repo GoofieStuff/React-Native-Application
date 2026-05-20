@@ -7,7 +7,7 @@ const index = () => {
 
   const list = [
     {key: 'Rank of Matrix Calculator', value: '/DSA/Matrix'},
-    {key: 'Stack Visualization', value: '/DSA/Stack/Stack'},
+    {key: 'Stack Visualization', value: '/DSA/Stack'},
     {key: 'Site map', value: '_sitemap'},
   ];
   return (

@@ -1,16 +1,20 @@
 import ThemedView from '@/components/CustomComponents/ThemedView';
 import {CustomButton} from '@/components/CustomComponents';
 import {getShadow} from '@/utilities/Styling';
-import {LayoutAnimation, ScrollView, Text, View} from 'react-native';
-import {useEffect, useRef, useState} from 'react';
-import Animated, {FadeInDown, FadeInUp, FadeOut, LinearTransition} from 'react-native-reanimated';
+import {ScrollView, Text, View} from 'react-native';
+import {useEffect, useState} from 'react';
+import Animated, {FadeInUp,  FadeOutDown, LinearTransition} from 'react-native-reanimated';
+import {v4 as uuidv4} from 'uuid';
 
 const Stack = () => {
-  const  [stack, setStack] = useState([]  as number[]);
+  const  [stack, setStack] = useState([]  as object[]);
 
   useEffect(()=>{
     console.log('stack', stack);
   }, [stack]);
+  useEffect(() => {
+    console.log('Loaded WEB Component.');
+  }, []);
 
   return (
     <ThemedView className={'w-full h-full p-5'}>
@@ -21,15 +25,16 @@ const Stack = () => {
           <View 
             className={'h-2/3 bg-orange-300 '}
           >
-            <Animated.ScrollView
+            <ScrollView 
             >
               {
                 stack.toReversed().map((item, index)=>{
                   return(
                     <Animated.View 
                       entering={FadeInUp.duration(200)}
+                      exiting={FadeOutDown.duration(200)}
                       layout={LinearTransition.duration(200)}
-                      key={Math.random()*Date.now()} 
+                      key={item?.id } 
                       style={{
                         width:'100%',
                         height:80,
@@ -37,12 +42,12 @@ const Stack = () => {
                         marginBottom:2,
                       }}
                     >
-                      <Text className={'text-white text-2xl'}>{item}</Text>
+                      <Text className={'text-white text-2xl'}>{item?.value}</Text>
                     </Animated.View>
                   );
                 })
               }
-            </Animated.ScrollView>
+            </ScrollView>
 
           </View>
           
@@ -82,7 +87,7 @@ const Stack = () => {
             buttonText={'PUSH'}
             textStyle={'font-extrabold text-2xl text-white'}
             onPress={()=>{
-              setStack(prev=> [...prev, Math.floor(Math.random()*10)]);
+              setStack(prev=> [...prev, {id: Math.random()+Date.now(), value: Math.floor(Math.random()*10)}]);
             }}
           />
 
