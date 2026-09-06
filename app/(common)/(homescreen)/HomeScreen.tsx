@@ -6,25 +6,26 @@ import HomeScreenAppInfo from './(info)/HomeScreenAppInfo';
 import HomeScreenHeader from './HomeScreenHeader';
 import {web} from '@/utilities/CommonFunctions';
 import HomeScreenFooter from './HomeScreenFooter';
-import {Text} from 'react-native';
+import ThemedView from '@/components/CustomComponents/ThemedView/ThemedView';
+import ThemedText from '@/components/CustomComponents/ThemedText/ThemedText';
 
 const Homescreen= (): React.JSX.Element => {
 
   return (
     <>
       <Drawer.Screen options={  {title: 'PoRtFoLio'}} />
-      <Box className={styleMerge('lg:w-4/5 bg-tertiary-50 w-full self-center android:w-full h-full  gap-5')}>
+      <ThemedView className={styleMerge('lg:w-4/5 bg-background w-full self-center android:w-full h-full  gap-5 ')}>
         <HomeScreenHeader />
         {web ? 
           <HomeScreenWebInfo />
           : (
             <>
               <HomeScreenAppInfo />
-             
             </>
           )}
         <HomeScreenFooter />
-      </Box>
+        
+      </ThemedView>
     </>
 
   );

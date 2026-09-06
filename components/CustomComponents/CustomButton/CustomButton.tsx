@@ -1,11 +1,11 @@
 import React from 'react';
-import {Pressable, Text} from 'react-native';
+import {Pressable, PressableProps, Text} from 'react-native';
 import {Spinner} from '@/components/ui/spinner';
 import {styleMerge} from '@/utilities/Styling';
-import {useRouter} from 'expo-router';
-import ThemedText from '../ThemedText';
+import {RelativePathString, useRouter} from 'expo-router';
+import ThemedText from '../ThemedText/ThemedText';
 
-type CustomButtonProps = {
+type CustomButtonProps = PressableProps & {
   buttonText?: string | (() => React.ReactNode);
   buttonStyle?: string;
   textStyle?: string;
@@ -17,7 +17,7 @@ type CustomButtonProps = {
   capitalised?: boolean;
   spinnerSize?: number | null;
   spinnerColour?: string | null;   
-  destination?: string;
+  destination?: RelativePathString | '' | string;
 };
 
 const CustomButton = ({
@@ -33,6 +33,7 @@ const CustomButton = ({
   containerCssStyle={},
   spinnerColour='',
   destination='',
+  ...others
 }: CustomButtonProps) => {
   let router = null;
   if(destination){
@@ -40,14 +41,15 @@ const CustomButton = ({
   }
   return (
     <Pressable
+      {...others}
       disabled={disabled || loading}
       onPress={destination ? ()=> router?.push(destination) : onPress}
       className={styleMerge(
-        'group flex-row items-center justify-evenly bg-primary-500  rounded-lg active:opacity-80 py-1 px-2',
+        'group flex-row items-center justify-evenly bg-primary rounded-lg active:opacity-80 py-1 px-2',
         (disabled || loading) ? 'opacity-50' : '',
         buttonStyle,
       )}
-      style={[, containerCssStyle]}
+      style={[ containerCssStyle]}
     >
       {loading && (
         <Spinner size={spinnerSize || 30} color={spinnerColour || 'white'}  />
@@ -57,7 +59,7 @@ const CustomButton = ({
 
       {!loading && buttonText && (typeof(buttonText) === 'function'? buttonText() : (
         <ThemedText
-          className={styleMerge( textStyle)}
+          className={styleMerge('text-primary-foreground', textStyle)}
         >
           {capitalised ? buttonText.toUpperCase() : buttonText}
         </ThemedText>

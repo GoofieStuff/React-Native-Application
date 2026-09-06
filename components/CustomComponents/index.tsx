@@ -1,5 +1,5 @@
 export * from './CustomHeaders';
 export * from './customWebDrawer';
-export * from './ThemedText';
-export * from './ThemedView';
+export * from './ThemedText/ThemedText';
+export * from './ThemedView/ThemedView';
 export * from './CustomButton';

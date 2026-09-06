@@ -1,8 +1,8 @@
 import {Text, View} from 'react-native';
 import React from 'react';
 import {Stack} from 'expo-router';
-import ThemedView from '@/components/CustomComponents/ThemedView';
-import ThemedText from '@/components/CustomComponents/ThemedText';
+import ThemedView from '@/components/CustomComponents/ThemedView/ThemedView';
+import ThemedText from '@/components/CustomComponents/ThemedText/ThemedText';
 
 const NotFoundPage = () => {
   return (

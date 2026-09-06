@@ -7,7 +7,7 @@ type ThemedViewProps = ViewProps & {
 
 const ThemedView = ({className='', ...rest}: ThemedViewProps) => {
   return (
-    <View className={styleMerge('dark:bg-gray-800 bg-tertiary-50 ', className)} {...rest} />
+    <View className={styleMerge('bg-background ', className)} {...rest} />
   );
 };
 

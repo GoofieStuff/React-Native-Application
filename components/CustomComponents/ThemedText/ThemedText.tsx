@@ -2,7 +2,7 @@ import {web} from '@/utilities/CommonFunctions';
 import {styleMerge} from '@/utilities/Styling';
 import {Text, TextProps, useWindowDimensions} from 'react-native';
 
-//Good example of Props passing to child. TextProps type gives all the props of 'View' to 'ThemedView'
+//Good example of Props passing to child. TextProps type gives all the props of 'Text' to 'ThemedText'
 type ThemedTextProps = TextProps & {
   className?: string
 };
@@ -24,7 +24,7 @@ const ThemedText = ({className='', ...rest}: ThemedTextProps) => {
   }
   
   return (
-    <Text className={styleMerge('dark:text-white text-center text-black ', ( web ? textSize: ''), className )} {...rest} />
+    <Text className={styleMerge(' text-center text-foreground', ( web ? textSize: ''), className )} {...rest} />
   );
 };
 

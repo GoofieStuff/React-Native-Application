@@ -1,5 +1,5 @@
-import ThemedText from '@/components/CustomComponents/ThemedText';
-import ThemedView from '@/components/CustomComponents/ThemedView';
+import ThemedText from '@/components/CustomComponents/ThemedText/ThemedText';
+import ThemedView from '@/components/CustomComponents/ThemedView/ThemedView';
 import {getShadow, styleMerge} from '@/utilities/Styling';
 import {HomeScreenData} from '@/assets/data/HomeScreen';
 import React from 'react';

@@ -1,11 +1,9 @@
 
 import {CustomButton} from '@/components/CustomComponents';
-import ThemedView from '@/components/CustomComponents/ThemedView';
-import {Marquee} from '@animatereactnative/marquee';
+import ThemedView from '@/components/CustomComponents/ThemedView/ThemedView';
 import {useState} from 'react';
 import {Dimensions,  Image, View} from 'react-native';
 import Animated, {useAnimatedReaction, useSharedValue} from 'react-native-reanimated';
-import {runOnJS} from 'react-native-worklets';
 
 const imagesSource = [
   {source: require('@/assets/images/HomePhoto1.jpg')},
@@ -63,7 +61,7 @@ const FirstAnimation = () => {
           }
         }>
 
-        <Marquee 
+        {/* <Marquee 
           style={{
             height:_itemHeight,
             width:'100%',
@@ -106,7 +104,7 @@ const FirstAnimation = () => {
             }
           </View>
           
-        </Marquee>
+        </Marquee> */}
       </View>
       <View style={
         {
